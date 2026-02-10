@@ -3,18 +3,15 @@ class Solution {
       Stack<Character> stack = new Stack<>();
       StringBuilder sb = new StringBuilder();
       for(char c : s.toCharArray()){
-        if(stack.isEmpty()){
-            stack.push(c);
-        } else if(!stack.isEmpty() && stack.peek() == c){
+        if(!stack.isEmpty() && stack.peek() == c){
             stack.pop();
         } else {
             stack.push(c);
         }
-        
       }
-      while(!stack.isEmpty()){
-         sb.append(stack.pop());
+      for(char c : stack){
+        sb.append(c);
       }
-     return sb.reverse().toString();
+     return sb.toString();
     }
 }
