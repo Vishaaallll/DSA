@@ -1,17 +1,17 @@
 class Solution {
     public List<Integer> toggleLightBulbs(List<Integer> bulbs) {
-        int [] arr = new int[101];
-        Arrays.fill(arr,0);
+        boolean [] arr = new boolean[101];
+        
         for(int num : bulbs){
-            if(arr[num] != 0){
-                arr[num] =0;
+            if(arr[num]){
+                arr[num] = false;
             } else {
-                arr[num] = 1;
+                arr[num] = true;
             }
         }
         List<Integer> list = new ArrayList<>();
         for(int i=1; i<=100; i++){
-            if(arr[i] == 1){
+            if(arr[i] == true){
                 list.add(i);
             }
         }
