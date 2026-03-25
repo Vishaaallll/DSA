@@ -1,9 +1,11 @@
 class Solution {
-    public int gcd(int a , int b){
-        if(a%b == 0){
-            return b;
+    public int gcd(int a, int b){
+            while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
         }
-        return gcd(b,a%b);
+        return a;
     }
     public long gcdSum(int[] nums) {
         int n = nums.length;
