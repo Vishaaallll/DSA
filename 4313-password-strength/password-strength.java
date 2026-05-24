@@ -1,11 +1,7 @@
 class Solution {
     public int passwordStrength(String password) {
         Set<Character> set = new HashSet<>();
-        Set<Character> set1 = new HashSet<>();
-        set1.add('!');
-        set1.add('@');
-        set1.add('#');
-        set1.add('$');
+        
         for( char c : password.toCharArray()){
             set.add(c);
         }
@@ -15,13 +11,13 @@ class Solution {
             if(c  >= 'a' &&  c <= 'z'  ){
                 total += 1;
             }
-            if(c >= 'A'  && c <= 'Z' ){
+            else  if(c >= 'A'  && c <= 'Z' ){
                 total += 2;
             }
-            if( c >= '0'  && c <= '9'){
+           else if( c >= '0'  && c <= '9'){
                 total += 3;
             }
-            if(set1.contains(c)){
+            else{
                 total += 5;
             }
         }
