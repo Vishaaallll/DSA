@@ -5,7 +5,7 @@ class Solution {
         int currCoins = coins;
         for(int i =0; i < costs.length; i++){
             if(currCoins < costs[i]){
-                continue;
+                break;
             } else {
                 currCoins -= costs[i];
                 numberOfIceCream ++;
