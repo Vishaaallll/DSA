@@ -11,6 +11,6 @@ class Solution {
             else if(c == 'D') y += -1;
             else underscore++;
         }
-        return Math.abs(0-x) + Math.abs(0 - y) + underscore;
+        return Math.abs(x) + Math.abs(y) + underscore;
     }
 }
