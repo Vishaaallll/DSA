@@ -1,6 +1,10 @@
 class Solution {
     public int minOperations(int[] nums, int x) {
-        int sum = Arrays.stream(nums).sum();
+        // int sum = Arrays.stream(nums).sum();
+        int sum = 0;
+        for(int num : nums){
+            sum+= num;
+        }
         if(sum < x) return -1;
         int target = sum - x , tarSum = 0;
         int maxLen = -1;
